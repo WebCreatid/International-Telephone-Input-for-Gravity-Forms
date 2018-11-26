@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: International Telephone Input for Gravity Forms 
-Plugin URI: https://webcreatid.com/
+Plugin URI: https://github.com/WebCreatid/International-Telephone-Input-for-Gravity-Forms
 Description: Transform Gravity Forms input phone to International Telephone Input.
 Version: 1.0.2
 Author: WebCreatid
