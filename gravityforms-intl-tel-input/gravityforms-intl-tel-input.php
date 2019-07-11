@@ -22,6 +22,8 @@ function gf_iti_js() {
 	wp_enqueue_script('intlTelInput');
 	wp_register_script('gf_intlTelInput', plugin_dir_url( __FILE__ ).'gf-intl-tel-input.js', array('jquery','intlTelInput'), false, true);
 	wp_enqueue_script('gf_intlTelInput');
+	wp_register_script('gf_intlTelInput_utils', plugin_dir_url( __FILE__ ).'intl-tel-input/js/utils.js', array('jquery','intlTelInput'), false, true);
+	wp_enqueue_script('gf_intlTelInput_utils');
 }
 
 add_action( 'gform_pre_submission', 'pre_submission_handler' );
