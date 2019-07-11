@@ -10,7 +10,7 @@ phone_inputs.each(function(index, phone_input){
 	      callback(countryCode);
 	    });
 	  },
-	  hiddenInput: "intlTelInput_full_phone-"+input_name,
-	  utilsScript: "wp-content/plugins/gravityforms-intl-tel-input/intl-tel-input/js/utils.js"
+	  //utilsScript: "wp-content/plugins/gravityforms-intl-tel-input/intl-tel-input/js/utils.js",
+	  hiddenInput: "intlTelInput_full_phone-"+input_name
 	});
 });
