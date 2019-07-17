@@ -8,8 +8,7 @@ Author: WebCreatid
 Author URI: https://webcreatid.com
 */
 
-$gf_plugin_dir = plugin_dir_url().'gravityforms/gravityforms.php';
-if (is_plugin_active($gf_plugin_dir)){
+if(is_plugin_active('gravityforms/gravityforms.php')){
 	add_action( 'wp_enqueue_scripts', 'gf_iti_css',99);
 	function gf_iti_css() {
 	    wp_register_style('intlTelInput-styles', plugin_dir_url( __FILE__ ).'intl-tel-input/css/intlTelInput.min.css');
@@ -41,5 +40,11 @@ if (is_plugin_active($gf_plugin_dir)){
 	  }
 	}
 }else{
-	//Plugin Gravity Forms not actived
+	add_action('admin_notices', 'gf_iti_gf_not_activated');
+}
+
+function gf_iti_gf_not_activated() {
+	echo '<div id="message" class="error">';
+	echo '  <p><strong>"International Telephone Input for Gravity Forms"</strong> plugin requires <strong>Gravity Forms</strong> plugin activated to work ! Install Gravity Forms plugin to enjoy ;)</p>';
+	echo '</div>';
 }
