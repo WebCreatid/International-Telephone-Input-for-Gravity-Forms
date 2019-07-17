@@ -34,7 +34,7 @@ if(is_plugin_active('gravityforms/gravityforms.php')){
 	    if(strpos($key, $prefix) !== false){
 	      $phone_input = str_replace($prefix, '', $key);
 	      if(isset($_POST[$phone_input])){
-		$_POST[$phone_input] = $value;
+		$_POST[$phone_input] = sanitize_text_field($value);
 	      }
 	    }
 	  }
